@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header section with title and subtitle -->
+      <header class="header">
+        <h1>Currency Converter</h1>
+        <p>Convert between different currencies</p>
+      </header>
+
+      <div class="converter">
+        <!-- Form for currency conversion -->
+        <form id="converter-form">
+          <!-- Input field for the amount to convert -->
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="text" id="amount" placeholder="Enter amount" />
+          </div>
+          <!-- Dropdown menu to select the currency to convert from -->
+          <div class="form-group">
+            <label for="from-currency">From</label>
+            <select id="from-currency">
+              <option value="USD">USD – US Dollar</option>
+              <option value="EUR">EUR – Euro</option>
+              <option value="GBP">GBP – British Pound</option>
+              <option value="JPY">JPY – Japanese Yen</option>
+              <option value="AUD">AUD – Australian Dollar</option>
+              <option value="PKR">PKR – Pakistani Rupee</option>
+            </select>
+          </div>
+
+          <!-- Button to swap the 'From' and 'To' currencies -->
+          <button type="button" class="swap-btn" id="swap-btn">⇄</button>
+
+          <!-- Dropdown menu to select the currency to convert to -->
+          <div class="form-group">
+            <label for="to-currency">To</label>
+            <select id="to-currency">
+              <option value="EUR">EUR – Euro</option>
+              <option value="USD">USD – US Dollar</option>
+              <option value="GBP">GBP – British Pound</option>
+              <option value="JPY">JPY – Japanese Yen</option>
+              <option value="AUD">AUD – Australian Dollar</option>
+              <option value="PKR">PKR – Pakistani Rupee</option>
+            </select>
+          </div>
+          <!-- Display the converted amount -->
+          <p id="result">Converted Amount:</p>
+          <!-- Reset button to clear the form -->
+          <button type="button" class="reset-btn" onclick="resetForm()">
+            Reset
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
